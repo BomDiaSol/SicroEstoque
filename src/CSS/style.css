@@ -1,0 +1,17 @@
+/* Estilo pros botões nas telas dos relatórios*/
+.button {
+    -fx-background-color: #ff6010;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-font-family: "Fira Code Bold";
+}
+
+
+.button:hover {
+    -fx-background-color: #ff8530;
+}
+
+
+.button:pressed {
+    -fx-background-color: #ff4500;
+}

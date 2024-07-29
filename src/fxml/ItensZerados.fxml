@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ItensZeradosController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: ff6010;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="botaoEstoqueGeral" alignment="CENTER" layoutY="175.0" mnemonicParsing="false" onAction="#handleBotaoEstoqueGeral" prefHeight="34.0" prefWidth="200.0" stylesheets="@../CSS/style.css" text="Estoque geral">
+               <font>
+                  <Font name="Fira Code Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="botaoPrincipaisItens" alignment="CENTER" layoutY="223.0" mnemonicParsing="false" onAction="#handleBotaoPrincipaisItens" prefHeight="34.0" prefWidth="200.0" stylesheets="@../CSS/style.css" text="Principais itens">
+               <font>
+                  <Font name="Fira Code Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" layoutY="271.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="200.0" stylesheets="@../CSS/style.css" text="Itens zerados">
+               <font>
+                  <Font name="Fira Code Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" layoutX="16.0" layoutY="85.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="169.0" style="-fx-background-color: transparente;" text="SincroEstoque">
+               <font>
+                  <Font name="Fira Code Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="66.0" fitWidth="95.0" layoutX="68.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/2900376.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="11.0" layoutY="135.0" prefHeight="18.0" prefWidth="178.0" />
+            <Separator layoutX="11.0" layoutY="467.0" prefHeight="18.0" prefWidth="178.0" />
+            <Label fx:id="usuarioNome" layoutX="74.0" layoutY="540.0" prefHeight="17.0" prefWidth="88.0" />
+            <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="40.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/74472.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ChoiceBox fx:id="escolha" layoutX="219.0" layoutY="119.0" prefWidth="150.0" />
+      <Label layoutX="219.0" layoutY="96.0" text="ID Representada" />
+      <Label layoutX="219.0" layoutY="20.0" text="Itens Zerados">
+         <font>
+            <Font name="Fira Code Bold" size="40.0" />
+         </font>
+      </Label>
+      <Separator layoutX="372.0" layoutY="91.0" orientation="VERTICAL" prefHeight="54.0" prefWidth="20.0" />
+      <Label layoutX="392.0" layoutY="96.0" text="Número de itens cadastrados" />
+      <TextField fx:id="qntItens" layoutX="389.0" layoutY="119.0" prefHeight="26.0" prefWidth="156.0" />
+      <TableView fx:id="tabela_itens" layoutX="219.0" layoutY="166.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="414.0" prefWidth="765.0" AnchorPane.bottomAnchor="19.200000000000045" AnchorPane.leftAnchor="219.0" AnchorPane.rightAnchor="15.199999999999932" AnchorPane.topAnchor="166.0">
+        <columns>
+          <TableColumn fx:id="col_ID" maxWidth="1.7976931348623157E308" prefWidth="85.59999084472656" text="ID Produto" />
+          <TableColumn fx:id="col_Descricao" maxWidth="1.7976931348623157E308" prefWidth="453.5999755859375" text="Descrição" />
+            <TableColumn fx:id="col_Estoque" maxWidth="1.7976931348623157E308" prefWidth="57.60009765625" text="Estoque" />
+            <TableColumn fx:id="col_IDFornecedor" maxWidth="1.7976931348623157E308" prefWidth="92.0" text="ID Fornecedor" />
+            <TableColumn fx:id="col_Status" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="77.5999755859375" text="Status" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="926.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/126489.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="959.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/a1e8f98e-a566-4581-b4eb-a0a1a644def2.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>
